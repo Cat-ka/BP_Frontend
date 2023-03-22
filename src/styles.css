@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+    color: #2b3a64;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+
+}
+
+.text-center {
+    text-align: center;
+    color: #2b3a64;
+
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+    margin: 20px;
+}
+
+.btn1 {
+    margin-bottom: 20px;
+    color: #2b3a64 !important;
+    background-color: #feb81c !important;
+}
+
+.btn2 {
+    margin-bottom: 20px;
+    color: #2b3a64 !important;
+    background-color: #feb81c !important;
+}
+
+.example-card {
+    margin: 20px;
+}
+
+

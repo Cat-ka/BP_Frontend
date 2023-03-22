@@ -1,0 +1,58 @@
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-6 offset-md-3">
+                <mat-card>
+                    <mat-card-content class="example-card">
+                        <div class="container text-center">
+
+                            <img src="../../../assets/FRI_H_S_sk_f.png" alt="" class="responsive" width="auto" height="auto"
+                                style="border-radius: 70%">
+                        </div>
+
+                        <h1 class="text-center" >Prihlásenie</h1>
+                        <!-- style="text-decoration-line: underline;" -->
+
+                        <!-- {{loginData|json}} -->
+                        <!-- toto mi vypisovalo username a password v login tabuľke -->
+
+                        <form (ngSubmit)="formSubmit()">
+                            <!-- aby fungovalo (ngSubmit)="formSubmit()", musela som to doplniť do signup.component.ts -->
+                            <!-- a do app.module.ts - do importov - FormsModule -->
+                            <!-- Username field -->
+
+                            <!-- Username field -->
+                            <mat-form-field class="full-width" appearance="fill">
+                                <mat-label>User Name</mat-label>
+                                <input 
+                                [(ngModel)]="loginData.username"
+                                name="username"
+                                required matInput placeholder="Enter here">
+                                <mat-hint>Use valid username.</mat-hint>
+                            </mat-form-field>
+
+                            <!-- Password field -->
+                            <mat-form-field class="full-width" appearance="fill">
+                                <mat-label>User Password</mat-label>
+                                <input 
+                                [(ngModel)]="loginData.password" 
+                                name="password" 
+                                type="password" 
+                                required 
+                                matInput
+                                placeholder="Enter here">
+                            </mat-form-field>
+
+                            <div class="container text-center">
+                                <button type="submit" mat-raised-button class="btn1" >Login</button>
+                                <button style="margin-left: 20px;" mat-raised-button class="btn2" >Reset</button>
+                            </div>
+
+                        </form>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

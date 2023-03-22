@@ -1,0 +1,35 @@
+<mat-toolbar class="mainToolbar">
+    <a href="/" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" title="Domov">
+        <!-- <mat-icon>menu</mat-icon> -->
+        <mat-icon>home</mat-icon>
+        <!-- tak isto... len som zmenila menu na list a zmenila sa ikona. sila mat-icon -->
+    </a>
+    <span>Portál semestrálnych prác</span>
+    <span class="example-spacer"></span>
+
+    <button *ngIf="!login.isLoggedIn()" mat-icon-button class="example-icon favorite-icon" title="Prihlásenie"
+        onclick="location.href='/login'" type="button" aria-label="Example icon-button with heart icon">
+        <!-- <mat-icon>favorite</mat-icon> -->
+        <mat-icon>login</mat-icon>
+        <!-- len som premenovala favorite na login a zmenila sa mi ikona....??? -->
+    </button>
+
+    <button *ngIf="!login.isLoggedIn()" mat-icon-button class="example-icon" onclick="location.href='/signup'"
+        title="Registrácia" type="button" aria-label="Example icon-button with menu icon">
+        <mat-icon>how_to_reg</mat-icon>
+    </button>
+
+    <a *ngIf="login.isLoggedIn()" 
+        aria-label="Example icon-button with menu icon">
+        {{login.getUser().username}}
+    </a>
+
+    <button *ngIf="login.isLoggedIn()" mat-icon-button class="example-icon" (click)="logout()" type="button"
+        title="Odhlásenie" aria-label="Example icon-button with menu icon">
+        <mat-icon>logout</mat-icon>
+    </button>
+
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" title="Zdieľanie">
+        <mat-icon>share</mat-icon>
+    </button>
+</mat-toolbar>

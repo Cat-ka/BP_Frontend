@@ -1,0 +1,11 @@
+.example-spacer {
+    flex: 1 1 auto;
+    /* vdaka tomuto mi posunulo ikony v navbare doprava a 3 pásiky a názor stránky ostalo vľavo*/
+  }
+
+
+  .mainToolbar{
+    background-color/*  */: #feb81c;
+    color: #2b3a64;
+    
+  }
